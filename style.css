@@ -67,15 +67,22 @@ a{color:var(--brand); text-decoration:none}
   font-size:16px;
 }
 .table.compare tr:last-child td{border-bottom:none}
+
+/* центр и ширина для колонок со статусами */
 .table.compare td:nth-child(n+2){
   text-align:center;
-  width:160px;
+  width:180px;
   font-weight:800;
   font-size:18px;
 }
-.yes{ color:#059669; }
-.no{ color:#b91c1c; }
-.partial{ color:#b91c1c; }
+
+/* цвета/тексты статусов */
+.yes{ color:#059669; }    /* зелёная галочка */
+.no{ color:#b91c1c; }     /* красный крест */
+.semi{ color:#111827; font-weight:700; font-size:16px } /* слово "частично" */
+.year{ color:var(--muted); font-weight:700; font-size:14px; margin-left:6px }
+
+/* сноска под таблицей */
 .table-note{color:var(--muted); font-size:13px; margin-top:8px}
 
 /* ===== КНОПКИ / ИНПУТЫ ===== */
@@ -113,5 +120,5 @@ a{color:var(--brand); text-decoration:none}
 @media (max-width: 640px){
   .nav{display:none}
   .hero{padding:56px 0 32px}
-  .table.compare td:nth-child(n+2){ width:120px; }
+  .table.compare td:nth-child(n+2){ width:140px; }
 }
