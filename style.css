@@ -67,16 +67,20 @@ a{color:var(--brand); text-decoration:none}
   font-size:16px;
 }
 .table.compare tr:last-child td{border-bottom:none}
+
+/* центр и ширина для колонок со статусами */
 .table.compare td:nth-child(n+2){
   text-align:center;
   width:180px;
   font-weight:800;
   font-size:18px;
 }
+
+/* статусы и подписи */
 .yes{ color:#059669; }    /* зелёная галочка */
 .no{ color:#b91c1c; }     /* красный крест */
-.star{ color:#b91c1c; margin-left:6px; font-weight:900; font-size:16px; vertical-align:baseline } /* звёздочка возле креста */
-.year{ color:var(--muted); font-weight:700; font-size:14px; margin-left:6px } /* (2023)/(2024) */
+.aster{ font-size:.75em; vertical-align:super; margin-left:2px } /* маленькая звёздочка как в тексте */
+.year{ color:var(--muted); font-weight:700; font-size:14px; margin-left:6px }
 .table-note{color:var(--muted); font-size:13px; margin-top:8px}
 
 /* ===== КНОПКИ / ИНПУТЫ ===== */
@@ -96,14 +100,20 @@ a{color:var(--brand); text-decoration:none}
 
 /* ===== ФУТЕР ===== */
 .footer{padding:22px 0; background:#111827; color:#e5e7eb}
-.footer__inner{display:flex; align-items:center; justify-content:space-between; gap:14px}
+.footer__inner{display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap}
 .footer__brand{display:flex; align-items:center; gap:8px}
 .footer__logo{height:26px}
+.inn{opacity:.9}
 
-/* ===== МИКРОАНИМАЦИИ ===== */
+/* анимация P.S. при появлении в зоне видимости */
 .reveal{opacity:0; transform:translateY(10px); transition:opacity .5s ease, transform .5s ease}
 .reveal.show{opacity:1; transform:none}
-.delay1{transition-delay:.08s} .delay2{transition-delay:.16s} .delay3{transition-delay:.24s}
+.pulse.show{animation: psGlow 1.6s ease-out 1}
+@keyframes psGlow{
+  0%{text-shadow:0 0 0 rgba(255,255,255,0)}
+  40%{text-shadow:0 0 16px rgba(255,255,255,.6)}
+  100%{text-shadow:0 0 0 rgba(255,255,255,0)}
+}
 
 /* ===== АДАПТИВ ===== */
 @media (max-width: 980px){
