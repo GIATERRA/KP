@@ -88,3 +88,5 @@ a{color:var(--brand); text-decoration:none}
   .nav{display:none} /* компактная шапка на мобиле */
   .hero{padding:56px 0 32px}
 }
+/* Сноска под таблицей сравнения */
+.table-note{color:var(--muted); font-size:13px; margin-top:8px}
