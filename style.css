@@ -77,9 +77,9 @@ a{color:var(--brand); text-decoration:none}
 }
 
 /* статусы и подписи */
-.yes{ color:#059669; }    /* зелёная галочка */
-.no{ color:#b91c1c; }     /* красный крест */
-.aster{ font-size:.75em; vertical-align:super; margin-left:2px } /* маленькая звёздочка как в тексте */
+.yes{ color:#059669; }             /* зелёная галочка */
+.no{ color:#b91c1c; }              /* красный крест */
+.aster{ font-size:.75em; vertical-align:super; margin-left:2px } /* маленькая звездочка */
 .year{ color:var(--muted); font-weight:700; font-size:14px; margin-left:6px }
 .table-note{color:var(--muted); font-size:13px; margin-top:8px}
 
@@ -105,7 +105,7 @@ a{color:var(--brand); text-decoration:none}
 .footer__logo{height:26px}
 .inn{opacity:.9}
 
-/* анимация P.S. при появлении в зоне видимости */
+/* анимации появления + свечения P.S. */
 .reveal{opacity:0; transform:translateY(10px); transition:opacity .5s ease, transform .5s ease}
 .reveal.show{opacity:1; transform:none}
 .pulse.show{animation: psGlow 1.6s ease-out 1}
