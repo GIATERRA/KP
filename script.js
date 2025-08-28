@@ -1,18 +1,17 @@
-// Плавное появление блоков при прокрутке
-const io = new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting) e.target.classList.add('show');
-  });
-},{threshold:0.08});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+// Включаем появление .reveal и подсветку P.S. при прокрутке
+document.addEventListener('DOMContentLoaded', () => {
+  const revealEls = document.querySelectorAll('.reveal');
 
-// Плавный скролл по якорям
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-  a.addEventListener('click', e=>{
-    const id = a.getAttribute('href');
-    if(id && id.startsWith('#') && id.length>1){
-      e.preventDefault();
-      document.querySelector(id)?.scrollIntoView({behavior:'smooth', block:'start'});
-    }
-  });
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      const el = entry.target;
+      if (entry.isIntersecting) {
+        el.classList.add('show');     // запускаем transition/animation
+      } else {
+        el.classList.remove('show');  // чтобы анимация могла перезапускаться
+      }
+    });
+  }, { threshold: 0.25 });
+
+  revealEls.forEach(el => io.observe(el));
 });
