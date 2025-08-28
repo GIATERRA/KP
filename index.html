@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body id="top">
-  <!-- ШАПКА: только логотип-картинка, без дублирования текста -->
+  <!-- ШАПКА -->
   <header class="header">
     <div class="container header__inner">
       <a class="brand" href="#top" aria-label="ГИАТЕРРА">
@@ -38,10 +38,10 @@
         <ul class="ticks reveal delay3">
           <li>Российский сервер</li>
           <li>Конфиденциальность персональных данных</li>
-          <li>Ежедневные обновления законодательства*</li>
-          <li>Работа с файлами и аудио*</li>
+          <li>Ежедневные обновления законодательства</li>
+          <li>Работа с файлами и аудио</li>
         </ul>
-        <p class="note reveal delay3">* Функции доступны на соответствующих тарифах</p>
+        <!-- сноску в hero убрали -->
       </div>
     </section>
 
@@ -69,36 +69,67 @@
       </div>
     </section>
 
-    <!-- СРАВНЕНИЕ -->
+    <!-- СРАВНЕНИЕ (со звёздочкой у «Ежедневные обновления*») -->
     <section id="compare" class="section">
       <div class="container">
         <h2 class="reveal">Сравнение</h2>
         <div class="table-wrap reveal delay1">
-          <table class="table">
+          <table class="table compare">
             <thead>
-              <tr><th>Функция</th><th>Наш сервис</th><th>ChatGPT</th><th>DeepSeek</th></tr>
+              <tr>
+                <th>Функция</th>
+                <th>Наш сервис</th>
+                <th>ChatGPT</th>
+                <th>DeepSeek</th>
+              </tr>
             </thead>
             <tbody>
-              <tr><td>Российский сервер</td><td>✔</td><td>✖</td><td>✖</td></tr>
-              <tr><td>Ежедневные обновления</td><td>✔</td><td>✖</td><td>✖</td></tr>
-              <tr><td>Специализация для юристов</td><td>✔</td><td>◯</td><td>◯</td></tr>
-              <tr><td>Анонимайзер ПД</td><td>✔</td><td>✖</td><td>✖</td></tr>
-              <tr><td>Файлы и аудио</td><td>✔</td><td>◯</td><td>◯</td></tr>
+              <tr>
+                <td>Российский сервер</td>
+                <td class="yes" aria-label="Да"></td>
+                <td class="no" aria-label="Нет"></td>
+                <td class="no" aria-label="Нет"></td>
+              </tr>
+              <tr>
+                <td>Ежедневные обновления*</td>
+                <td class="yes" aria-label="Да"></td>
+                <td class="no" aria-label="Нет"></td>
+                <td class="no" aria-label="Нет"></td>
+              </tr>
+              <tr>
+                <td>Специализация для юристов</td>
+                <td class="yes" aria-label="Да"></td>
+                <td class="partial" aria-label="Частично"></td>
+                <td class="partial" aria-label="Частично"></td>
+              </tr>
+              <tr>
+                <td>Анонимайзер ПД</td>
+                <td class="yes" aria-label="Да"></td>
+                <td class="no" aria-label="Нет"></td>
+                <td class="no" aria-label="Нет"></td>
+              </tr>
+              <tr>
+                <td>Файлы и аудио</td>
+                <td class="yes" aria-label="Да"></td>
+                <td class="partial" aria-label="Частично"></td>
+                <td class="partial" aria-label="Частично"></td>
+              </tr>
             </tbody>
           </table>
+          <p class="table-note">* Доступно в платных тарифах</p>
         </div>
       </div>
     </section>
 
-    <!-- ТАРИФЫ (обновлённые тексты) -->
+    <!-- ТАРИФЫ -->
     <section id="pricing" class="section">
       <div class="container">
         <h2 class="reveal">Тарифные планы</h2>
         <div class="grid3">
           <article class="card reveal delay1">
             <h3>Тариф «Профи»</h3>
-            <p><strong>Регистрация:</strong> <span class="price">59 000 ₽</span></p>
-            <p><strong>Ежемесячная оплата:</strong> <span class="price">4 900 ₽</span></p>
+            <p><strong>Регистрация:</strong> <span class="price">59&nbsp;000 ₽</span></p>
+            <p><strong>Ежемесячная оплата:</strong> <span class="price">4&nbsp;900 ₽</span></p>
             <ul class="bullets bullets--note">
               <li>Ежегодное обслуживание считается от 10 профилей</li>
               <li>Производится индивидуальный расчёт</li>
@@ -107,8 +138,8 @@
 
           <article class="card reveal delay2">
             <h3>Тариф «Гибкий»</h3>
-            <p><strong>Регистрация:</strong> <span class="price">88 000 ₽</span></p>
-            <p><strong>Подписка:</strong> <span class="price">56 000 ₽</span> в год <span class="muted">или</span> <span class="price">5 100 ₽</span> в месяц</p>
+            <p><strong>Регистрация:</strong> <span class="price">88&nbsp;000 ₽</span></p>
+            <p><strong>Подписка:</strong> <span class="price">56&nbsp;000 ₽</span> в год <span class="muted">или</span> <span class="price">5&nbsp;100 ₽</span> в месяц</p>
             <ul class="bullets bullets--note">
               <li>Программа «Приведи друга»: сумма регистрации делится на 5 человек</li>
             </ul>
@@ -116,8 +147,8 @@
 
           <article class="card reveal delay3">
             <h3>Тариф «Стандарт»</h3>
-            <p><strong>Регистрация:</strong> <span class="price">88 000 ₽</span></p>
-            <p><strong>Подписка:</strong> <span class="price">56 000 ₽</span> в год <span class="muted">или</span> <span class="price">5 100 ₽</span> в месяц</p>
+            <p><strong>Регистрация:</strong> <span class="price">88&nbsp;000 ₽</span></p>
+            <p><strong>Подписка:</strong> <span class="price">56&nbsp;000 ₽</span> в год <span class="muted">или</span> <span class="price">5&nbsp;100 ₽</span> в месяц</p>
           </article>
         </div>
       </div>
@@ -135,7 +166,7 @@
       </div>
     </section>
 
-    <!-- КОНТАКТЫ (подпись изменена) -->
+    <!-- КОНТАКТЫ -->
     <section id="contacts" class="section">
       <div class="container grid2">
         <div class="card reveal">
@@ -150,7 +181,7 @@
           <input class="input" name="Email" type="email" placeholder="Ваш email" required>
           <textarea class="input" name="Сообщение" rows="4" placeholder="Коротко опишите задачу"></textarea>
           <button class="btn btn-primary" type="submit">Отправить</button>
-          <p class="muted">Можем подключить Formspree/Яндекс.Формы — скажи, сделаю.</p>
+          <!-- строку про Formspree/Яндекс.Формы удалили -->
         </form>
       </div>
     </section>
